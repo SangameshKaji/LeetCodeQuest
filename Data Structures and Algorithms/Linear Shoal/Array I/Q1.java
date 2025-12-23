@@ -1,4 +1,5 @@
-class Solution {
+// Q1. Concatenation of Array
+class Q1 {
     public int[] getConcatenation(int[] nums) {
         int n = nums.length;
         int[] ans = new int[2 * n];
