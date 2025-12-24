@@ -1,5 +1,5 @@
 // Q2. Shuffle the Array
-class Solution {
+class Q2 {
     public int[] shuffle(int[] nums, int n) {
         int num[] = new int[2*n];
         int c = n;
