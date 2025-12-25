@@ -1,4 +1,4 @@
-//
+//Q1. Build an Array With Stack Operations
 import java.util.*;
 class Q1 {
     public List<String> buildArray(int[] target, int n) {
