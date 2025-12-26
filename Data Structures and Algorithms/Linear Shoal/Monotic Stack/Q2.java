@@ -1,4 +1,4 @@
-//
+//Q2. Evaluate Reverse Polish Notation
 import java.util.*;
 class Q2 {
     public int evalRPN(String[] t) {
