@@ -2,17 +2,21 @@
 import java.util.*;
 class Q1 {
     public int lastStoneWeight(int[] stones) {
-        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
-        for (int stone : stones) {
-            pq.offer(stone);
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);
+
+        for (int s : stones) {
+            maxHeap.add(s);
         }
-        while (pq.size() > 1) {
-            int first = pq.poll();
-            int second = pq.poll();
-            if (first != second) {
-                pq.offer(first - second);
+
+        while (maxHeap.size() > 1) {
+            int y = maxHeap.poll();
+            int x = maxHeap.poll();
+            if (y != x) {
+                maxHeap.add(y - x);
             }
         }
-        return pq.isEmpty() ? 0 : pq.poll();
+
+        Integer last = maxHeap.poll();
+        return last == null ? 0 : last;
     }
 }
