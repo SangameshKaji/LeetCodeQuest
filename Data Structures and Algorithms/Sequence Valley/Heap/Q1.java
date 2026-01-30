@@ -16,7 +16,6 @@ class Q1 {
             }
         }
 
-        Integer last = maxHeap.poll();
-        return last == null ? 0 : last;
+        return maxHeap.isEmpty() ? 0 : maxHeap.poll();
     }
 }
